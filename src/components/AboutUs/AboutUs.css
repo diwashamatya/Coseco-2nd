@@ -1,0 +1,244 @@
+.about-container {
+  /* Using background variable for the main section */
+  background-color: var(--background); 
+  margin: 5% 3%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Images - ORIGINAL LAYOUT */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column-right {
+  padding-top: 60px; /* Original offset for main image */
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Added a themed border for a cleaner look in dark mode */
+  border: 1px solid var(--border);
+}
+
+.bottom-left img {
+  filter: grayscale(100%);
+  height: 200px; /* Original height */
+}
+
+.main-img img {
+  height: 450px; /* Original height */
+}
+
+/* Enhanced Typography - Better Hierarchy */
+.text-block {
+  padding-right: 20px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--textPrimary);
+  margin-bottom: 35px;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.description {
+  margin-bottom: 40px;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--textPrimary);
+  margin-bottom: 20px;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+.body-text {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--textSecondary);
+  margin-bottom: 0;
+  font-weight: 300;
+  max-width: 90%;
+}
+
+.read-more-btn {
+  /* Using the new button theme variables */
+  background: var(--buttonBg);
+  color: var(--buttonText);
+  border: 1px solid var(--buttonBorder);
+  padding: 18px 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  box-shadow: var(--cardShadow);
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.read-more-btn:hover {
+  /* Dynamic hover state */
+  background: var(--buttonHover);
+  box-shadow: var(--cardHoverShadow);
+  transform: translateY(-2px);
+}
+
+.read-more-btn span {
+  font-size: 1.125rem;
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .about-content {
+    gap: 50px;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .lead-text {
+    font-size: 1.125rem;
+  }
+  
+  .body-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .title {
+    font-size: 2.75rem;
+  }
+
+  .main-img img {
+    height: 350px;
+  }
+
+  .bottom-left img {
+    height: 180px;
+  }
+  
+  .text-block {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .lead-text,
+  .body-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    margin: 8% 5%;
+  }
+  
+  .image-grid {
+    gap: 15px;
+  }
+  
+  .column-left {
+    gap: 15px;
+  }
+  
+  .column-right {
+    padding-top: 40px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .lead-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  
+  .body-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    margin: 10% 5%;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .title::after {
+    width: 50px;
+    height: 3px;
+    bottom: -12px;
+  }
+  
+  .main-img img {
+    height: 300px;
+  }
+  
+  .bottom-left img {
+    height: 150px;
+  }
+  
+  .read-more-btn {
+    padding: 16px 28px;
+    font-size: 0.75rem;
+  }
+}

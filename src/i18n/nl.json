@@ -1,0 +1,76 @@
+{
+    "home": "Startpagina",
+    
+    "contact": "Contact",
+    "welcome": "Welkom op onze website",
+    "theme": "Thema",
+    "language": "Taal",
+    "hero": {
+        "brandName": "Veilige Groei met COSECO",
+        "title": "Bouw Veilige Digitale Systemen",
+        "subtitle": "Nederlands-ontworpen software, cloudplatformen en cybersecurity oplossingen ontworpen om moderne bedrijven te beschermen, schalen en transformeren.",
+        "cta": {
+            "primary": "Start Veilig Project",
+            "secondary": "Verken Oplossingen",
+            "viewProject": "BEKIJK PROJECT"
+        },
+        "slides": [
+            {
+                "title": "Enterprise Cybersecurity"
+            },
+            {
+                "title": "Cloud Software Engineering"
+            },
+            {
+                "title": "Digitale Transformatie"
+            }
+        ]
+    },
+    
+    
+    
+   
+    "mission": {
+        "heading": "Hoofdfocus / Missieverklaring",
+        "items": [
+            {
+                "id": 1,
+                "text": "Het ontwikkelen van cybersecurity-frameworks die ondernemingen beschermen tegen evoluerende bedreigingen over elk continent en tijdzone."
+            },
+            {
+                "id": 2,
+                "text": "Het implementeren van cloud-native oplossingen die naadloos kunnen opschalen over wereldwijde regio’s en diverse digitale infrastructuren."
+            },
+            {
+                "id": 3,
+                "text": "Het stimuleren van digitale transformatie die de kloof overbrugt tussen complexe legacy-systemen en toekomstbestendige wereldwijde operaties."
+            },
+            {
+                "id": 4,
+                "text": "Het waarborgen dat uw organisatie voldoet aan internationale gegevensbeschermingsnormen, waaronder GDPR, SOC2 en wereldwijde privacyvereisten."
+            },
+            {
+                "id": 5,
+                "text": "Het bieden van de strategische visie die nodig is om een concurrentievoordeel te behouden in een snel veranderend technologisch wereldlandschap."
+            }
+        ]
+    },
+    "about": {
+        "title": "Over COSECO",
+        "paragraph1": "COSECO is een toonaangevende leverancier van enterprise cybersecurity, cloud software engineering en digitale transformatiediensten. We helpen bedrijven hun digitale infrastructuur te beschermen, schalen en moderniseren.",
+        "paragraph2": "Ons team combineert geavanceerde technologie met strategische inzichten om oplossingen te leveren die veilig, schaalbaar en duurzaam zijn.",
+        "buttonText": "LEES MEER",
+        "alt1": "Technische infrastructuur",
+        "alt2": "Bedrijfstechnologie",
+        "alt3": "Moderne technologie oplossingen"
+    },
+   "projectsTopTitle1": "Globale",
+"projectsTopTitle2": "Modernisering",
+"projectsTopDescription": "COSECO stelt multinationale organisaties in staat om hun digitale activa te centraliseren en te beveiligen. Of het nu gaat om het beheren van grensoverschrijdende cloudmigraties of het implementeren van enterprise-grade software, wij bieden de zichtbaarheid en bescherming die nodig is om te leiden in de wereldwijde markt.",
+"projectsTopButton": "Verken Oplossingen",
+"projectsBottomTitle1": "Verenigd",
+"projectsBottomTitle2": "Verbonden",
+"projectsBottomDescription": "Verbind uw wereldwijde personeelsbestand met veilige, hoogwaardige samenwerkingsframeworks. COSECO overbrugt de afstand tussen internationale teams, zodat gegevens vrij kunnen stromen waar ze nodig zijn en opgesloten blijven waar ze gevoelig zijn - waar uw kantoren zich ook bevinden.",
+"projectsBottomButton": "Verbinden Wereldwijd"
+
+}

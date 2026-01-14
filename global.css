@@ -1,0 +1,7 @@
+ @import "tailwindcss";
+
+@theme inline {
+  --font-roboto: var(--font-roboto);
+  --font-gothicA1: var(--font-gothic-a1);
+  --font-openSans: var(--font-open-sans);
+}

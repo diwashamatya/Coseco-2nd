@@ -1,0 +1,140 @@
+.image-style-section {
+  background: var(--background);
+  padding: 120px 5%;
+  color: var(--textPrimary);
+  font-family: "Inter", sans-serif;
+}
+
+/* ================= GRID ================= */
+
+.image-style-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.image-style-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 60px;
+  border-radius: 16px;
+  background: transparent;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-style-item:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= NUMBER DESIGN ================= */
+
+.number-container {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.ghost-number {
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -6px;
+  user-select: none;
+  color: var(--ghostNumber);
+  transition: transform 0.4s ease, opacity 0.8s ease;
+}
+
+.image-style-item:hover .ghost-number {
+  transform: translateY(-10px);
+  opacity: 0.35;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider-line {
+  width: 100%;
+  border-top: 1px dotted var(--divider);
+  margin: 12px 0 28px;
+}
+
+/* ================= CONTENT ================= */
+
+.icon-area {
+  margin-bottom: 40px;
+  color: var(--textPrimary);
+  transition: transform 0.3s ease;
+}
+
+.image-style-item:hover .icon-area {
+  transform: scale(1.1);
+}
+
+.item-title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.item-desc {
+  font-size: 1rem;
+  color: var(--textSecondary);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  min-height: 60px;
+}
+
+/* ================= BUTTON ================= */
+
+.minimal-btn {
+  background: none;
+  border: none;
+  color: var(--textSubtle);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.minimal-btn:hover {
+  color: var(--btn-color);
+  transform: translateX(4px);
+}
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 0.875rem;
+  color: var(--textSecondary);
+  line-height: 1.5;
+}
+
+.features-list li {
+  margin-bottom: 6px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .image-style-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .image-style-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ghost-number {
+    font-size: 6rem;
+  }
+}

@@ -1,0 +1,303 @@
+.mission-marquee-container {
+  padding: 80px 0;
+  background-color: var(--background);
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* FIXED HEADER STYLES - Removed the blue dash */
+.mission-marquee-heading {
+  text-align: center;
+  font-size: 4.5rem;
+  color: var(--textSecondary);
+  opacity: 0.6;
+  font-weight: 800;
+  margin-bottom: 80px;
+  letter-spacing: -1px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* REMOVED the ::before and ::after pseudo-elements that created the blue dash */
+/* .mission-marquee-heading::before,
+.mission-marquee-heading::after {
+  ... REMOVED ...
+} */
+
+.mission-marquee-window {
+  display: flex;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+}
+
+.mission-marquee-content {
+  display: flex;
+  gap: 60px;
+  padding: 20px 0;
+}
+
+.mission-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  min-width: 500px;
+  padding: 35px;
+  background: var(--cardBg);
+  border-radius: 16px;
+  border: 1px solid var(--cardBorder);
+  box-shadow: var(--cardShadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mission-card:hover {
+  box-shadow: var(--cardHoverShadow);
+  transform: translateY(-5px);
+}
+
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+.mission-number {
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: var(--textSecondary);
+  opacity: 0.15;
+  line-height: 0.7;
+  user-select: none;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover .mission-number {
+  opacity: 0.25;
+  transform: scale(1.05);
+}
+
+.mission-content {
+  flex: 1;
+}
+
+.mission-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--textPrimary);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.mission-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s ease;
+}
+
+.mission-card:hover .mission-title::after {
+  width: 60px;
+}
+
+.mission-text {
+  font-size: 1.0625rem;
+  color: var(--textSecondary);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    var(--border), 
+    transparent
+  );
+  margin-top: 20px;
+  opacity: 0.5;
+}
+
+/* Gradient overlays - made stronger for slower speed */
+.marquee-gradient-left,
+.marquee-gradient-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px; /* Increased for better fade effect */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.marquee-gradient-left {
+  left: 0;
+  background: linear-gradient(90deg, 
+    var(--background), 
+    transparent 90%
+  );
+}
+
+.marquee-gradient-right {
+  right: 0;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--background) 90%
+  );
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .mission-marquee-heading {
+    font-size: 3.5rem;
+    padding: 0 15px;
+  }
+  
+  .mission-card {
+    min-width: 450px;
+    padding: 30px;
+  }
+  
+  .mission-number {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .mission-marquee-container {
+    padding: 60px 0;
+  }
+  
+  .mission-marquee-heading {
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+  
+  .mission-card {
+    min-width: 400px;
+    padding: 25px;
+  }
+  
+  .mission-number {
+    font-size: 4.5rem;
+  }
+  
+  .mission-title {
+    font-size: 1.125rem;
+  }
+  
+  .mission-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-marquee-heading {
+    font-size: 2.5rem;
+    padding: 0 15px;
+  }
+  
+  .mission-marquee-content {
+    gap: 40px;
+  }
+  
+  .mission-card {
+    min-width: 350px;
+    gap: 20px;
+  }
+  
+  .mission-number {
+    font-size: 4rem;
+  }
+  
+  /* Adjust gradients for mobile */
+  .marquee-gradient-left,
+  .marquee-gradient-right {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-marquee-container {
+    padding: 40px 0;
+  }
+  
+  .mission-marquee-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .mission-marquee-content {
+    gap: 30px;
+  }
+  
+  .mission-card {
+    min-width: 300px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .mission-number {
+    font-size: 3.5rem;
+    line-height: 0.8;
+  }
+  
+  .mission-title {
+    font-size: 1rem;
+  }
+  
+  .mission-text {
+    font-size: 0.9375rem;
+  }
+  
+  .marquee-gradient-left,
+  .marquee-gradient-right {
+    width: 50px;
+  }
+}

@@ -1,0 +1,73 @@
+{
+    "home": "Home",
+    
+    "contact": "Contact",
+    "welcome": "Welcome to our website",
+    "theme": "Theme",
+    "language": "Language",
+  "hero": {
+    "brandName": "Secure Growth with COSECO",
+    "title": "Build Secure Digital Systems",
+    "subtitle": "Dutch-engineered software, cloud platforms, and cybersecurity solutions designed to protect, scale, and transform modern businesses.",
+    "cta": {
+        "primary": "Start Secure Project",
+        "secondary": "Explore Solutions",
+        "viewProject": "VIEW PROJECT"
+    },
+    "slides": [
+        {
+            "title": "Enterprise Cybersecurity"
+        },
+        {
+            "title": "Cloud Software Engineering"
+        },
+        {
+            "title": "Digital Transformation"
+        }
+    ]
+},
+    "mission": {
+        "heading": "Main Focus / Mission Statement",
+        "items": [
+            {
+                "id": 1,
+                "text": "Engineering cybersecurity frameworks that protect enterprises against evolving threats across every continent and timezone."
+            },
+            {
+                "id": 2,
+                "text": "Deploying cloud-native solutions designed to scale seamlessly across global regions and diverse digital infrastructures."
+            },
+            {
+                "id": 3,
+                "text": "Driving digital transformation that bridges the gap between complex legacy systems and future-ready global operations."
+            },
+            {
+                "id": 4,
+                "text": "Ensuring your organization meets international data protection standards, including GDPR, SOC2, and global privacy mandates"
+            },
+            {
+                "id": 5,
+                "text": "Providing the strategic vision needed to maintain a competitive edge in a rapidly shifting worldwide technological landscape."
+            }
+        ]
+    },
+    "about": {
+        "title": "About COSECO",
+        "paragraph1": "COSECO is a leading provider of enterprise cybersecurity, cloud software engineering, and digital transformation services. We help businesses protect, scale, and modernize their digital infrastructure.",
+        "paragraph2": "Our team combines cutting-edge technology with strategic insights to deliver solutions that are secure, scalable, and sustainable.",
+        "buttonText": "READ MORE",
+        "alt1": "Tech infrastructure",
+        "alt2": "Business technology",
+        "alt3": "Modern technology solutions"
+    },
+    "projectsTopTitle1": "Global",
+    "projectsTopTitle2": "Modernization",
+    "projectsTopDescription": "COSECO empowers multinational organizations to centralize and secure their digital assets. Whether managing cross-border cloud migrations or deploying enterprise-grade software, we provide the visibility and protection required to lead in the global marketplace.",
+    "projectsTopButton": "Explore Solutions",
+    "projectsBottomTitle1": "Unified",
+    "projectsBottomTitle2": "Connected",
+    "projectsBottomDescription": "Connect your global workforce with secure, high-performance collaboration frameworks. COSECO bridges the distance between international teams, ensuring that data flows freely where it's needed and stays locked down where it's sensitive—no matter where your offices are located.",
+    "projectsBottomButton": "Connect Globally"
+
+    
+}

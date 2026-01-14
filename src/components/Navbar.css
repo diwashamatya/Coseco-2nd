@@ -1,0 +1,309 @@
+/* Import Montserrat (weights 400, 600, 700) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* ===== NAVBAR CONTAINER ===== */
+.navbar-container {
+  font-family: 'Montserrat', sans-serif;   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: var(--surface);
+  border-bottom: 2px solid var(--border);
+  z-index: 1000;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+/* Glassy effect when scrolled (height stays same) */
+.navbar-container.scrolled {
+  background-color: var(--glassBackground);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid var(--glassBorder);
+  box-shadow: var(--glassShadow);
+  height: 90px; /* Keep fixed, no shrink */
+}
+
+/* ===== LOGO ===== */
+.navbar-logo {
+  height: 90px; /* Fixed height */
+  width: 70px; /* Fixed width */
+  display: flex;
+  align-items: center;
+  transition: none; /* No shrinking on scroll */
+}
+
+.navbar-logo img {
+  height: 100%; /* Keep fixed */
+  width: auto;
+  object-fit: contain;
+  transition: none; /* No shrinking */
+}
+
+/* ===== DESKTOP NAV LINKS ===== */
+.navbar-links.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 4rem;
+}
+
+.navbar-links.desktop-nav a {
+  color: var(--textPrimary);
+  font-size: 0.9rem; /* Fixed size */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-links.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-links.desktop-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar-links.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== DESKTOP CONTROLS ===== */
+.navbar-controls.desktop-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-controls select,
+.navbar-controls button {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--textPrimary);
+  padding: 6px 12px;
+  font-size: 0.75rem; /* Fixed size */
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-controls select:hover,
+.navbar-controls button:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
+
+/* ===== BURGER BUTTON ===== */
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+.burger-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--textPrimary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Burger Animation */
+.burger-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--glassBackground);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-left: 1px solid var(--glassBorder);
+  box-shadow: var(--glassShadow);
+  z-index: 1001;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.show {
+  right: 0;
+}
+
+/* Mobile Menu Header (Close Button) */
+.mobile-menu-header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+
+.close-menu-btn {
+  background: transparent;
+  border: none;
+  color: var(--textPrimary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.close-menu-btn:hover {
+  background: rgba(var(--textPrimary-rgb), 0.1);
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Content */
+.mobile-menu-content {
+  padding: 1rem 2rem 2rem;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Mobile Links */
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-links a {
+  color: var(--textPrimary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(var(--textPrimary-rgb), 0.05);
+  border: 1px solid transparent;
+  display: block;
+  text-align: center;
+}
+
+.mobile-links a:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
+}
+
+/* Mobile Controls */
+.mobile-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-controls select,
+.mobile-controls button {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--textPrimary);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.mobile-controls select:hover,
+.mobile-controls button:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
+
+/* ===== OVERLAY ===== */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+/* ===== BODY PADDING ===== */
+body {
+  padding-top: 90px; /* fixed for navbar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --primary-rgb: 37, 99, 235;
+  --textPrimary-rgb: 17, 24, 39;
+}
+
+body.dark {
+  --primary-rgb: 59, 130, 246;
+  --textPrimary-rgb: 248, 250, 252;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+  /* Hide desktop nav + controls */
+  .desktop-nav,
+  .desktop-controls {
+    display: none !important;
+  }
+
+  /* Show burger button */
+  .burger-btn {
+    display: flex !important;
+  }
+}

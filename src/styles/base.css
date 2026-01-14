@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--textPrimary);
+  transition: all 0.3s ease;
+}
+
+main {
+  padding: 24px;
+}

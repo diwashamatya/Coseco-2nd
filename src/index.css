@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Navbar */
+nav {
+  background-color: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons & Select */
+button,
+select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:hover,
+select:hover {
+  opacity: 0.85;
+}
+
+/* Dark overrides */
+body[data-theme="dark"] button,
+body[data-theme="dark"] select {
+  border-color: #475569;
+}
+
+/* Main content */
+main {
+  padding: 24px;
+}
